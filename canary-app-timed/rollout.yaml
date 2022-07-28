@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: webserver-simple
-        image: docker.io/kostiscodefresh/gitops-canary-app:v1.0
+        image: docker.io/kostiscodefresh/gitops-canary-app:v2.0
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
@@ -30,7 +30,7 @@ spec:
             - summer-k8s-mapping
       steps:
       - setWeight: 30
-      - pause: {duration: 2m}
+      - pause: {duration: 1m}
       - setWeight: 60
-      - pause: {duration: 2m}
+      - pause: {duration: 1m}
       - setWeight: 100
